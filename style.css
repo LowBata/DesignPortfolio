@@ -1,0 +1,490 @@
+/* ===================== */
+/* General Styles        */
+/* ===================== */
+
+/*Font from Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-image: url("background.jpg"); /* Replace with your background image */
+    background-repeat: repeat;
+}
+
+a {
+    color: midnightblue;
+    /*text-decoration: none;*/
+}
+
+/* ===================== */
+/* Container             */
+/* ===================== */
+.container {
+    max-width: 90%; /* Maximum width for desktop screens */
+    margin: 0 auto;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5b0c8;
+}
+
+/* Adjust width for desktop screens */
+@media (min-width: 1024px) {
+    .container {
+        width: 50%; /* Set width to 50% on larger screens */
+    }
+}
+
+/* ===================== */
+/* Banner                */
+/* ===================== */
+.banner {
+    font-family: "Stylish", serif;
+    font-size: clamp(1rem, 5vw, 2rem); /* Fluid font size */
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 0.25rem 0;
+}
+
+    .banner h1, .banner h3 {
+        margin: 0.5rem;
+    }
+
+/* Adjust font size for smaller screens */
+@media (max-width: 768px) {
+    .banner {
+        font-size: clamp(0.9rem, 4vw, 1.8rem); /* Smaller fluid font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        font-size: clamp(1rem, 3.5vw, 1.5rem); /* Even smaller fluid font size */
+    }
+}
+
+
+/* ===================== */
+/* Header and Navigation */
+/* ===================== */
+header {
+    width: 100%;
+    margin: 0rem auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+    nav a {
+        color: midnightblue;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0.75rem;
+        text-align: center;
+        background-color: white;
+        flex: 1;
+        margin: 0.25rem;
+        border-radius: 10px;
+    }
+
+/* ===================== */
+/* Footer */
+/*CONTACT INFORMATION*/
+/* ===================== */
+
+footer {
+    font-family: "Stylish", serif;
+    margin: 0;
+    text-align: center;
+}
+
+    footer p {
+        padding: 0rem;
+    }
+
+    footer h1 {
+        margin: 0;
+        font-weight: 700;
+        color: white;
+    }
+
+    footer h2 {
+        margin: 0.5rem;
+    }
+
+/* ===================== */
+/* Project Boxes         */
+/* ===================== */
+.boxes {
+    display: grid;
+    gap: 1.5rem; /* Spacing between boxes */
+    width: 100%;
+}
+
+/* Default: 1 column layout for mobile */
+.boxes {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* 2 columns for tablets */
+@media (min-width: 768px) {
+    .boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 3 columns for desktop */
+@media (min-width: 1024px) {
+    .boxes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: pink;
+}
+
+/* Colors for box white and box pink */
+.pink {
+    background-color: pink;
+}
+
+.white {
+    background-color: white;
+}
+
+/* ===================== */
+/* Box 1        */
+/* ===================== */
+.box1 {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+}
+
+    .box1 .title {
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .box1 img {
+        width: 100%; /* Make images fill the container width */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 300px; /* Set a maximum width for larger screens */
+        aspect-ratio: 1 / 1; /* Set a consistent aspect ratio (e.g., 16:9) */
+        object-fit: cover; /* Ensure the image covers the entire area */
+        border-radius: 10px; /* Optional: Add rounded corners */
+    }
+
+
+/* ===================== */
+/* Box 2         */
+/* ===================== */
+.box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 1rem;
+    flex: 1;
+}
+
+    .box2 p {
+        text-align: left;
+        margin: 0;
+    }
+
+/* ===================== */
+/* Project Tags          */
+/* ===================== */
+.rect-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+    .rect-container div {
+        padding: 0.5rem 1rem;
+        color: white;
+        border-radius: 10px;
+        font-size: 0.875rem;
+        text-align: center;
+        width: fit-content;
+    }
+
+.AIrect {
+    background-color: #cc0000;
+}
+
+.ARTrect {
+    background-color: #cc00cc;
+}
+
+.PROGrect {
+    background-color: #003cb3;
+}
+
+.NARRATIVErect {
+    background-color: #e67300;
+}
+
+.LEVELrect {
+    background-color: #009900;
+}
+
+/* ===================== */
+/* Box 3 - Portfolio Pages       */
+/* ===================== */
+.box3 {
+    padding: 2rem;
+}
+
+    .box3 a {
+        color: #43accc; /* Change this to your desired link color */
+    }
+
+    .box3 h1 {
+        text-align: center; /* Center-align the text */
+        margin: 0 auto; /* Remove default margin and center the element */
+        width: 100%; /* Ensure it takes up the full width */
+    }
+
+    .box3 img,
+    .box3 video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .box3 video {
+        object-fit: contain;
+    }
+
+/* ===================== */
+/* Box 4 - Featured Section */
+/* ===================== */
+.box4 {
+    width: 90%; /* Default width for smaller screens */
+    max-width: 600px; /* Fixed maximum width for larger screens */
+    margin: 1rem; /* Centers the box and adds spacing above/below */
+    padding: 0.25rem; /* Adds padding inside the box */
+    background-color: white; /* Matches the box white style */
+    border-radius: 10px; /* Rounded corners for consistency */
+    text-align: center; /* Centers the text inside the box */
+}
+
+    .box4 h2 {
+        margin: 0.5rem;
+    }
+
+/* Adjust width for larger screens */
+@media (min-width: 768px) {
+    .box4 {
+        width: 70%; /* Slightly wider on medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .box4 {
+        width: 50%; /* Reaches max-width on larger screens */
+    }
+}
+
+/* ===================== */
+/* Box 5 - Image and Text Layout */
+/* FOR HOME PAGE INTRO */
+/* ===================== */
+.box5 {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Default: Image on left, text on right */
+    align-items: center; /* Vertically center the content */
+    gap: 2rem; /* Add spacing between the image and text */
+    padding: 1rem; /* Add padding inside the box */
+    max-width: 100%; /* Ensure it doesn't overflow the container */
+    margin: 0 auto; /* Center the box horizontally */
+}
+
+/* Stack image below text on smaller screens */
+@media (max-width: 768px) {
+    .box5 {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center-align text */
+        gap: 1rem; /* Reduce gap for smaller screens */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+        .box5 img {
+            width: 150px; /* Smaller image size for mobile */
+            height: 150px; /* Smaller image size for mobile */
+            margin-top: 1rem; /* Add spacing above the image */
+        }
+}
+
+/* ===================== */
+/* Box 5 - Image and Text Layout */
+/* FOR HOME PAGE INTRO */
+/* ===================== */
+.box5 {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Default: Image on left, text on right */
+    align-items: center; /* Vertically center the content */
+    gap: 2rem; /* Add spacing between the image and text */
+    padding: 1rem 10rem; /* Large left/right padding for desktop */
+    max-width: 100%; /* Ensure it doesn't overflow the container */
+    margin: 0 auto; /* Center the box horizontally */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Adjust padding for tablets */
+@media (max-width: 1024px) {
+    .box5 {
+        padding: 1rem 4rem; /* Medium left/right padding for tablets */
+    }
+}
+
+/* Stack image below text and reduce padding for smaller screens */
+@media (max-width: 768px) {
+    .box5 {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center-align text */
+        gap: 1rem; /* Reduce gap for smaller screens */
+        padding: 1rem 2rem; /* Small left/right padding for phones */
+    }
+
+        .box5 img {
+            width: 150px; /* Smaller image size for mobile */
+            height: 150px; /* Smaller image size for mobile */
+            margin-top: 1rem; /* Add spacing above the image */
+        }
+}
+
+/* Image styling */
+.box5 img {
+    width: 200px; /* Default image size */
+    height: 200px; /* Default image size */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the area */
+    transition: width 0.3s ease, height 0.3s ease; /* Smooth scaling */
+}
+
+/* Text content styling */
+.text-content {
+    flex: 1; /* Allow the text to take up remaining space */
+}
+
+    .text-content h2 {
+        margin: 0; /* Remove default margin */
+        font-size: 1.5rem; /* Default font size for h2 */
+        line-height: 1.5; /* Improve readability with line height */
+        margin-bottom: 1rem; /* Add spacing below the heading */
+    }
+
+    .text-content p {
+        margin: 0; /* Remove default margin */
+        font-size: 1.1rem; /* Default font size for p */
+        line-height: 1.6; /* Improve readability with line height */
+    }
+
+/* Responsive font sizes */
+@media (max-width: 1024px) {
+    .text-content h2 {
+        font-size: 1.25rem; /* Smaller font size for tablets */
+    }
+
+    .text-content p {
+        font-size: 1rem; /* Smaller font size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .text-content h2 {
+        font-size: 1.1rem; /* Smaller font size for phones */
+    }
+
+    .text-content p {
+        font-size: 0.9rem; /* Smaller font size for phones */
+    }
+}
+
+.FileLinks {
+    text-align: center; /* Centers the text horizontally */
+    width: 100%; /* Ensures the div takes up the full width of its container */
+    margin: 0 auto; /* Centers the div itself horizontally */
+    padding: 0rem 0; /* Adds some padding above and below for spacing */
+}
+
+/* To Top Button */
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position so it stays in view */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Default position for smaller screens */
+    padding: 15px 30px; /* Padding for button size */
+    font-size: 18px; /* Font size */
+    font-family: "Stylish", serif; /* Custom font */
+    color: white; /* Text color */
+    background-color: #e0416e; /* Pink background */
+    border: 2px solid white; /* White border */
+    border-radius: 25px; /* Rounder corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+    #scrollToTopBtn:hover {
+        background-color: #ff69b4; /* Slightly darker pink on hover */
+        transform: scale(1.1); /* Slightly enlarge on hover */
+    }
+
+/* Adjust button position and size for larger screens */
+@media (min-width: 1024px) {
+    #scrollToTopBtn {
+        right: calc(50% - 600px); /* Position next to the .container */
+        padding: 20px 40px; /* Larger padding */
+        font-size: 20px; /* Larger font size */
+    }
+}
+
+/* Adjust button for medium screens (e.g., tablets) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    #scrollToTopBtn {
+        right: 40px; /* Move closer to the edge */
+        padding: 18px 36px; /* Slightly smaller padding */
+        font-size: 18px; /* Slightly smaller font size */
+    }
+}
+
+/* Adjust button for small screens (e.g., phones) */
+@media (max-width: 767px) {
+    #scrollToTopBtn {
+        right: 10px; /* Move closer to the edge */
+        padding: 12px 24px; /* Smaller padding */
+        font-size: 16px; /* Smaller font size */
+    }
+}
